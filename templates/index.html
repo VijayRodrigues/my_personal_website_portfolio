@@ -33,7 +33,11 @@
 
     <style>
 
-    
+    #google_translate_element{
+        position:fixed;
+        bottom: 23px;
+        right: 100px;
+    }
     
     .contact_img{
         position: relative;
@@ -553,15 +557,7 @@
 
     <div class="trans-section">
         <div id="google_translate_element" style="display: none;"></div>
-        <select class="selectpicker" data-width="fit" onchange="translateLanguage(this.value);">
-
-			<option value="English">English</option>
-            <option value="Arabic">Arabic</option>
-            <option value="Hindi">Hindi</option>
-            <option value="Kannada">Kannada</option>
-            <option value="Malayalam">Malayalam</option>
-        </select>
-
+        
     </div>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
@@ -590,13 +586,6 @@
     </script>
 
         
-
-
-
-
-
-
-
    
 </body>
 </html>

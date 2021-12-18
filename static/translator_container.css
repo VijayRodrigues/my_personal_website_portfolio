@@ -88,6 +88,6 @@
 
   #google_translate_element{
     position:fixed;
-    bottom: 500px;
+    bottom: 100px;
     z-index: 11;
   }

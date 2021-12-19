@@ -22,14 +22,16 @@ def index():
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
-        if "name" in request.form and "email" in request.form and "subject" in request.form and "comments" in request.form:
-            name = request.form["name"]
+        if "fname" in request.form and "lname" in request.form and "phone" in request.form and "email" in request.form and "subject" in request.form and "comments" in request.form:
+            fname = request.form["fname"]
+            lname = request.form["lname"]
+            phone = request.form["phone"]
             email = request.form["email"]
             subject = request.form["subject"]
             comments = request.form["comments"]
             
             cursor = db.connection.cursor(MySQLdb.cursors.DictCursor)
-            cursor.execute("INSERT INTO heroku_8d772f13676a339.contact_portfolio_tb(name, email, subject, comments)VALUES(%s,%s,%s,%s)", (name, email, subject, comments))
+            cursor.execute("INSERT INTO heroku_8d772f13676a339.contact_portfolio_tb(fname, lname, phone, email, subject, comments)VALUES(%s,%s,%s,%s,%s,%s)", (fname, lname, phone, email, subject, comments))
             db.connection.commit()
     return render_template("index.html")
 

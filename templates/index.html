@@ -29,10 +29,20 @@
       </script>
 
     <style>
+
     .trans{
         position:fixed;
         bottom: 23px;
         right: 100px;
+    }
+
+    .aud_img_new{
+        position:relative;
+        float:right;
+        bottom: -60px;
+        right:-50px;
+        background-color: transparent;
+        border: 0px solid transparent;
     }
 
     .trans_ops{
@@ -46,7 +56,7 @@
         position: relative;
         float:right;
         width:20%;
-        top:-10px;
+        top:0px;
         left:-100px;
     }    
         
@@ -134,13 +144,27 @@
         <div class="max-width">
             <div class="home-content">
                 <div class="text-1">Hello, my name's</div>
-                <div class="text-2">Vijay Rodrigues</div>
+                <div class="text-2">Vijay Rodrigues</div><br>    
+
                 <div class="text-3">& I'm a <span class="typing"></span></div>
+                
                 <br>
                 <a href="https://github.com/VijayRodrigues" target="_blank">GitHub</a>
-            </div>
+            </div>  
+
+
+<!-- Pronunciation audio -->
+
+<div class="aud_img_new">
+    <!-- Image --> 
+    <a class="" href="javascript:playSound('name_aud');"><img class ="tooltip" src="{{ url_for('static', filename= 'pronunciation.gif')}}" width="30" height="30" alt="not available" /> </a>
+    <!--Audio File-->
+    <audio id="name_aud"  src="{{ url_for('static', filename= 'pronunciation.mp3')}}" preload="auto"></audio>
+</div>
+
         </div>
     </section>
+
 
     <!-- about section start -->
     <section class="about" id="about">
@@ -511,6 +535,8 @@
 </section>
 
 
+
+
     <!-- footer section start -->
     <footer class="contact">
         <a href="https://www.facebook.com/vijay.rodrigues/" target="_blank" class="fa fa-facebook"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -521,7 +547,24 @@
     </footer>
    
 
-    <div class="trans">
+
+
+
+
+
+
+<script>
+    function playSound(name_aud) {
+        document.getElementById(name_aud).play();
+      };
+      
+</script>
+
+
+
+
+
+<div class="trans">
         <div class="notranslate">
     <!-- GTranslate: https://gtranslate.io/ -->
 
@@ -554,6 +597,8 @@
 </div>
 
 <script src="{{ url_for('static', filename= 'mobile_num.js')}}"></script>
+
+
 
 </body>
 </html>

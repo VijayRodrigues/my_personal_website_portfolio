@@ -13,12 +13,7 @@ html{
 }
 
 
-
-
-
-    
-    
-    
+  
 
 /* unvisited link */
 a:link {
@@ -39,14 +34,6 @@ a:link {
   a:active {
     color: rgb(245, 240, 240);
   }
-
-
-
-
-
-
-
-
 
 
 
@@ -252,6 +239,8 @@ section .title::after{
     color: red;
     background: none;
 }
+
+
 
 /* about section styling */
 .about .title::after{

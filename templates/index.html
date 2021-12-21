@@ -36,14 +36,7 @@
         right: 100px;
     }
 
-    .aud_img_new{
-        position:relative;
-        float:right;
-        bottom: -250px;
-        right:320px;
-        background-color: transparent;
-        border: 0px solid transparent;
-    }
+   
 
     .trans_ops{
         width:100%;
@@ -143,8 +136,15 @@
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-                <div class="text-1">Hello, my name's</div>
-                <div class="text-2">Vijay Rodrigues</div><br>    
+                <div class="text-1">Hello, my name's </div>
+                <div class="text-2">Vijay Rodrigues  <!-- Pronunciation audio -->
+                    <a class="aud_img_new" href="javascript:playSound('name_aud');"><img class ="tooltip" src="{{ url_for('static', filename= 'pronunciation.gif')}}" width="30" height="30" alt="not available" /> </a>
+                    </div><div class="aud_img_new">
+                        <!-- Image --> 
+                        
+                        <!--Audio File-->
+                        <audio id="name_aud"  src="{{ url_for('static', filename= 'pronunciation.mp3')}}" preload="auto"></audio>
+                    </div><br>    
 
                 <div class="text-3">& I'm a <span class="typing"></span></div>
                 
@@ -153,14 +153,7 @@
             </div>  
 
 
-<!-- Pronunciation audio -->
 
-<div class="aud_img_new">
-    <!-- Image --> 
-    <a class="" href="javascript:playSound('name_aud');"><img class ="tooltip" src="{{ url_for('static', filename= 'pronunciation.gif')}}" width="30" height="30" alt="not available" /> </a>
-    <!--Audio File-->
-    <audio id="name_aud"  src="{{ url_for('static', filename= 'pronunciation.mp3')}}" preload="auto"></audio>
-</div>
 
         </div>
     </section>

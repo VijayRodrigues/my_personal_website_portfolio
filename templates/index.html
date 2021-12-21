@@ -10,23 +10,17 @@
     <link rel="stylesheet"  href="{{ url_for('static', filename='mobile_num.css')}}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" rel="stylesheet" media="screen">
+    
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" rel="stylesheet" media="screen">
-    
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.js"></script>
 	
-    
-
     <script src="{{ url_for('static', filename= 'script.js')}}"></script>
-
 
     <script>
         function myFunction() {
@@ -34,10 +28,7 @@
         }
       </script>
 
-
-
     <style>
-
     .trans{
         position:fixed;
         bottom: 23px;
@@ -46,14 +37,17 @@
 
     .trans_ops{
         width:100%;
+        border-color: red;
+        border-width: 4px;
+        font-weight: bold;
     }
     
     .contact_img{
         position: relative;
         float:right;
-        width:8%;
-        top:-330px;
-        left:-200px;
+        width:20%;
+        top:-10px;
+        left:-100px;
     }    
         
         /* width */
@@ -106,17 +100,10 @@
             opacity: 0.7;
             color: #ff0404;
         }
-          
-          
+              
     </style>
-
-
-
 </head>
 <body onLoad="window.scroll(0, 0)">
-
-    
-
 
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
@@ -136,8 +123,6 @@
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
          
-                
-            
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
@@ -206,14 +191,9 @@
                     <p></p>
                 </div>
             </div>
-           
-          
-           
         </div>
     </div>
 </section>
-
-
 
  <!-- skills section start -->
  <section class="skills" id="skills">
@@ -266,7 +246,6 @@
             </div>
 
 
-
             <div class="column right">
                 
                 <div class="bars">
@@ -311,24 +290,13 @@
                     </div>
                     <div class="line selenium_webdriver"></div>
                 </div>
-               
             </div>
-
-
             <div class="column left">    
                 <a href="#">Read more</a>
             </div>
-
-
         </div>
-
-       
-
     </div>
 </section>
-
-
-
 
     <!-- services section start -->
     <section class="services" id="services">
@@ -406,8 +374,6 @@
     </section>
 
 
-   
-
     <!-- Hobbies section start -->
  <section class="hobbies" id="hobbies">
     <div class="max-width">
@@ -426,15 +392,11 @@
 
             <div class="column left">    
                 <a href="#">Read more</a>
-            </div>
-            
+            </div> 
         </div>
     </div>
     </div>
 </section>
-
-
-
 
 
     <!-- education section start -->
@@ -476,96 +438,86 @@
     </section>
 
 
-    
 
-    <!-- contact section start -->
-    <section class="contact" id="contact">
-        <div class="max-width">
-            <h2 class="title">Contact me</h2>
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Get in Touch</div>
-    
-                    <div class="icons">
-                        <div class="row">
-                            <i class="fas fa-user"></i>
-                            <div class="info">
-                                <div class="head">Name</div>
-                                <div class="sub-title">Vijay Rodrigues</div>
-                            </div>
+<!-- contact section start -->
+<section class="contact" id="contact">
+    <div class="max-width">
+        <h2 class="title">Contact me</h2>
+        <div class="contact-content">
+            <div class="column left">
+                <div class="text">Get in Touch</div>
+
+                <div class="icons">
+                    <div class="row">
+                        <i class="fas fa-user"></i>
+                        <div class="info">
+                            <div class="head">Name</div>
+                            <div class="sub-title">Vijay Rodrigues</div>
                         </div>
-                        <div class="row">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="info">
-                                <div class="head">Address</div>
-                                <div class="sub-title">Bangalore, Karnataka</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-envelope"></i>
-                            <div class="info">
-                                <div class="head">Email</div>
-                                <div class="sub-title">contactmevijay82@gmail.com</div>
-                            </div>
-                        </div>
-                        
                     </div>
+                    <div class="row">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info">
+                            <div class="head">Address</div>
+                            <div class="sub-title">Bangalore, Karnataka</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info">
+                            <div class="head">Email</div>
+                            <div class="sub-title">contactmevijay82@gmail.com</div>
+                        </div>
+                    </div>
+                    
                 </div>
-                
-                <div class="column right" id>
-                    <div class="text">Message me</div>
-                    <form action="/contact" method="post" onsubmit="myFunction()">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" placeholder="First Name" name="fname" autocomplete="off" required>
-                            </div>
-                            <div class="field name">
-                                <input type="text" placeholder="Last Name" name="lname" autocomplete="off" required>
-                            </div>
-                          
-                        </div>
-
-                        <div class="field">
-                            <input id="phone" type="tel" name="phone" placeholder="Mobile Number" autocomplete="off" required style="text-align:center;">
-                            </div>
-
-                        <div class="field">
-                            <input type="email" placeholder="Email" name="email" autocomplete="off" required>
-                        </div>
-                        <div class="field">
-                            <input type="text" placeholder="Subject" name="subject" autocomplete="off" required>
-                        </div>
-                        <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." name="comments" autocomplete="off" required></textarea>
-                        </div>
-                        <div class="button-area">
-                            <button type="submit">Send message</button>
-                         
-                        </div>
-                    </form>
-                </div>
-                
-   
-
             </div>
-        
+            
+            <div class="column right" id>
+                <div class="text">Message me</div>
+                <form action="/contact" method="post" onsubmit="myFunction()">
+                    <div class="fields">
+                        <div class="field name">
+                            <input type="text" placeholder="First Name" name="fname" autocomplete="off" required>
+                        </div>
+                        <div class="field name">
+                            <input type="text" placeholder="Last Name" name="lname" autocomplete="off" required>
+                        </div>
+                      
+                    </div>
+
+                    <div class="field">
+                        <input id="phone" type="tel" name="phone" placeholder="Mobile Number" autocomplete="off" required style="text-align:center;">
+                        <img class="contact_img" src="{{ url_for('static', filename= 'contact_img.png')}}">
+                    </div>
+
+                    <div class="field">
+                        <input type="email" placeholder="Email" name="email" autocomplete="off" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Subject" name="subject" autocomplete="off" required>
+                    </div>
+                    <div class="field textarea">
+                        <textarea cols="30" rows="10" placeholder="Message.." name="comments" autocomplete="off" required></textarea>
+                    </div>
+                    <div class="button-area">
+                        <button type="submit">Send message</button>
+                     
+                    </div>
+                </form>
             </div>
-            <img class="contact_img" src="{{ url_for('static', filename= 'contact_img.png')}}">
-    </section>
-
-
-    
+        </div>
+    </div>       
+</section>
 
 
     <!-- footer section start -->
     <footer class="contact">
-        
         <a href="https://www.facebook.com/vijay.rodrigues/" target="_blank" class="fa fa-facebook"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://www.instagram.com/vijay_rodrigues_666/" class="fa fa-instagram" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://www.linkedin.com/in/vijay-rodrigues-6b6422164" target="_blank" class="fa fa-linkedin"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://github.com/VijayRodrigues" class="fa fa-github" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://www.hackerrank.com/vijayrodrigues18" class="fab fa-hackerrank" target="_blank"></a>
-
     </footer>
    
 
@@ -602,8 +554,6 @@
 </div>
 
 <script src="{{ url_for('static', filename= 'mobile_num.js')}}"></script>
-
-
 
 </body>
 </html>

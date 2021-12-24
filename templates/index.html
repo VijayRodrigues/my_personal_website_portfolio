@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" rel="stylesheet" media="screen">
-    
+    <link href='https://fonts.googleapis.com/css?family=Doppio One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Fira Sans Condensed' rel='stylesheet'>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
@@ -55,7 +57,8 @@
         top:0px;
         left:-100px;
     }    
-        
+      
+
         /* width */
 ::-webkit-scrollbar {
     width: 30px;
@@ -96,6 +99,16 @@
             display:contents;
           }
           
+          .fa,.fas {
+            padding: 20px;
+            font-size: 50px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 70%;
+            display:contents;
+          } 
      
           .fa:hover {
               opacity: 0.7;
@@ -106,8 +119,43 @@
             opacity: 0.7;
             color: #ff0404;
         }
-              
+            
+        
+        .name_text{
+            font-family: 'Doppio One';
+            font-size: 25px;
+            color:red;
+            font-weight: bold;
+        }
+
+        .name_text:hover{
+            font-family: 'Doppio One';
+            font-size: 25px;
+            color:red;
+            font-weight: bold;
+        }
+
+
+        .position_text{
+            font-family: 'Fira Sans Condensed';
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .company_text{
+            font-family: 'Fira Sans Condensed';
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .position_text2{
+            font-family: 'Fira Sans Condensed';
+            font-size: 12px;
+            font-weight: bold;
+        }
+
     </style>
+
 </head>
 <body onLoad="window.scroll(0, 0)">
 
@@ -117,15 +165,16 @@
     <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#">My Portfo<span>lio.</span></a></div>
-            
+           
             <ul class="menu">
-                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#home" class="menu-btn">Home</i></a></li>
                 <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="#company" class="menu-btn">Company</a></li>
                 <li><a href="#skills" class="menu-btn">Skills</a></li>
                 <li><a href="#services" class="menu-btn">Projects</a></li>
                 <li><a href="#hobbies" class="menu-btn">Hobbies</a></li>  
                 <li><a href="#education" class="menu-btn">Education</a></li>
+                <li><a href="#testimonies" class="menu-btn">Testimonies</a></li>
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
          
@@ -406,8 +455,7 @@
                 <p class="hobby_text">I do love editing videos. Although I am not a professional editor, I started editing small clips, sometimes related to work, college fests etc. When I get chance to travel with friends I make sure I edit a video.</p>
                 <br>
                 <p class="hobby_text">But my ongoing hobby is collecting currency notes of the world. Back in 2006, I came across couple of old currency notes that someone had given to my Mom. I got fascinated with it and gradually I started collecting myself from my freinds, by going to exhibitions etc. Today I have currency notes belonging to approximately 146 countries that include both Paper notes and Polymer notes. It's been more that 15 years and both my interest in this hobby and my collection are gradually increasing.</p>
-                <br>
-                <p class="hobby_text">It might be strange but I listen to any songs as long as it sounds good. So I listen to songs composed in different languages, instrumentals etc. My all time favourite music band is Linkin Park. I basically grew up listening to these songs. But these days I also prefer listening to RAP music of artists Eminem, NF and Juice Wrld especially.</p>
+                
             </div>
 
             <div class="column left">    
@@ -456,6 +504,52 @@
             </div>
         </div>
     </section>
+
+
+<br><br><br><br>
+
+    <!-- testimonies section start -->
+    <section class="testimonies" id="testimonies">
+        <div class="max-width">
+            <h2 class="title">Testimonies</h2>
+            <div class="carousel owl-carousel">
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-quote-left"></i>
+                        <div class="text">I have worked with Vijay and his commitment to work is Second to none. He joined my team straight of College but his professionalism and attention to details did not even once made me feel i was working with a Fresher. He is super Committed and the people he placed at Client will second that. Vijay is great team player indeed and have seen him helping other at multiple Occasions.</div>
+                        <p class="name_text">Aditya Raj</p>
+                        <p class="position_text">Account Manager</p>
+                        <p class="company_text">TEKsystems</p>
+                        <p class="position_text2">Aditya managed me DIRECTLY</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-quote-left"></i>
+                        <div class="text">Vijay is benig recruiting HR, He handles and reads the situation very well , a good recruiter even though if employee doesnt feel like he is not comportable for opening ,he keeps following up with employee to find them right job and out of his busy shedules he encourage the employee and
+                            help them to get suitable position ,I have seen so many recruting HR across my career and your in the list of besties . I wish Vijay all the best .</div>
+                        <p class="name_text">Ajay Naik</p>
+                        <p class="position_text">New Relic SME</p>
+                        <p class="company_text">Coforge</p>
+                        <p class="position_text2">Ajay was a client of mine</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-quote-left"></i>
+                        <div class="text">Vijay is highly motivated and valuable member of the team. His biggest strength is his ability to deal with conflicting priorities in high-pressure situations. Vijay has exhibited consistency in his ability to remain focussed and committed. His willingness to accept challenges and working over and beyond has contributed to the achieve company's goals. I highly recommend Vijay as a valuable member of the team.</div>
+                        <p class="name_text">Simmi Nagpal</p>
+                        <p class="position_text">Senior Tendering and Markets Analyst</p>
+                        <p class="company_text">Bill Identity (Formerly BidEnergy BID)</p>
+                        <p class="position_text2">Simmi managed me INDIRECTLY</p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
 
 
 

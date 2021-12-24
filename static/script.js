@@ -41,6 +41,13 @@ $(document).ready(function(){
         loop: true
     });
 
+    // typing text animation script
+    var typed = new Typed(".typing-2", {
+        strings: ["Data Analyst", "Data Associate"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
    
 
     // owl carousel script

@@ -62,7 +62,7 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .company, .skills, .hobbies, .education, .contact, footer{
+.about, .services, .company, .skills, .hobbies, .education, .testimonies, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
@@ -124,7 +124,7 @@ section .title::after{
 }
 .navbar .logo a{
     color: #fff;
-    font-size: 45px;
+    font-size: 50px;
     font-weight: 600;
 }
 .navbar .logo a span{
@@ -143,7 +143,7 @@ section .title::after{
     color: #fff;
     font-size: 18px;
     font-weight: 500;
-    margin-right: 25px;
+    margin-right: 12px;
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
@@ -211,7 +211,7 @@ section .title::after{
     font-size: 27px;
 }
 .home .home-content .text-2{
-    font-size: 70px;
+    font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
 }
@@ -354,6 +354,23 @@ section .title::after{
 }
 .services .title::after,
 .education .title::after{
+    background: #111;
+    content: "what i worked on";
+}
+
+
+
+/* services testimonies section styling */
+.services, .testimonies{
+    color:#fff;
+    background: #111;
+}
+.services .title::before,
+.testimonies .title::before{
+    background: #fff;
+}
+.services .title::after,
+.testimonies .title::after{
     background: #111;
     content: "what i worked on";
 }
@@ -647,6 +664,57 @@ section .title::after{
 
 
 
+
+/* testimonies section styling */
+.testimonies .title::after{
+    content: "what others say";
+}
+.testimonies .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.testimonies .carousel .card:hover{
+    background: transparent;
+    color:white;
+}
+.testimonies .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    height: 400px;
+}
+.testimonies .carousel .card:hover .box{
+    transform: scale(1.05);
+    color:white;
+}
+.testimonies .carousel .card .text{
+    font-size: 13px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    text-align: justify;
+    
+}
+.testimonies .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid red;
+    transition: all 0.3s ease;
+}
+.testimonies .carousel .card:hover img{
+    border-color: #fff;
+}
+
+
+
+
 .owl-dots{
     text-align: center;
     margin-top: 20px;
@@ -801,9 +869,6 @@ footer span a:hover{
     .menu-btn i.active:before{
         content: "\f00d";
     }
-
-
-    
 
 
 

@@ -621,7 +621,7 @@ section .title::after{
 
 /* education section styling */
 .education .title::after{
-    content: "where i studied at";
+    content: "where i studied";
 }
 .education .carousel .card{
     background: #222;

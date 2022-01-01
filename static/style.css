@@ -62,7 +62,7 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .company, .skills, .hobbies, .education, .testimonies, .contact, footer{
+.about, .services, .company, .skills, .hobbies, .education, .certificates .testimonies, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
@@ -332,10 +332,6 @@ section .title::after{
 .company .carousel .card:hover img{
     border-color: #fff;
 }
-
-
-
-
 
 
 
@@ -659,6 +655,72 @@ section .title::after{
 }
 .education .carousel .card:hover img{
     border-color: #fff;
+}
+
+
+
+
+
+
+
+/* certificates section styling */
+.certificates .title::after{
+    content: "who with me";
+}
+.certificates .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.certificates .carousel .card:hover{
+    background: red;
+}
+.certificates .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color:#fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+.certificates .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.certificates .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.certificates .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid red;
+    transition: all 0.3s ease;
+    
+}
+.certificates .carousel .card:hover img{
+    border-color: #fff;
+}
+
+
+.certificates{
+    color:#111;
+    background: #fff;
+}
+
+.certificates .title::before{
+    background: #111;
+}
+
+.certificates .title::after{
+    background: #fff;
+    content: "what i got";
 }
 
 

@@ -192,7 +192,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("background_img7.jpg") no-repeat center;
+    background: url("background_img13.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -220,8 +220,9 @@ section .title::after{
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
+    background-color: rgb(223, 210, 210);
     color: red;
-    font-weight: 500;
+    font-weight: 800;
 }
 .home .home-content a{
     display: inline-block;

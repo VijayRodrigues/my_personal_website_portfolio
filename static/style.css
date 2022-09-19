@@ -10,6 +10,8 @@
 
 html{
     scroll-behavior: smooth;
+    background-image: url("white_bg.jpg");
+    background-size: cover;
 }
 
 
@@ -247,6 +249,7 @@ section .title::after{
 /* about section styling */
 .about .title::after{
     content: "who i am";
+    
 }
 .about .about-content .left{
     width: 45%;
@@ -291,6 +294,12 @@ section .title::after{
 
 
 
+/* services education section styling */
+.company{
+    color:#fff;
+    background-image: url("black_bg.jpg");
+    background-size: cover;
+}
 
 
 /* company section styling */
@@ -344,7 +353,8 @@ section .title::after{
 /* services education section styling */
 .services, .education{
     color:#fff;
-    background: #111;
+    background-image: url("black_bg.jpg");
+    background-size: cover;
 }
 .services .title::before,
 .education .title::before{
@@ -379,7 +389,8 @@ section .title::after{
 /* services company section styling */
 .company{
     color:#fff;
-    background: #111;
+    background-image: url("black_bg.jpg");
+    background-size: cover;
 }
 
 .company .title::before{
@@ -395,7 +406,15 @@ section .title::after{
 
 
 
+.services{
+    color:white;
+    background-image: url("black_bg.jpg");
+    background-size: cover;
+}
 
+.services .title::before{
+    background: white
+}
 
 .services .serv-content .card{
     width: calc(33% - 50px);
@@ -704,7 +723,6 @@ section .title::after{
     border-radius: 50%;
     border: 5px solid red;
     transition: all 0.3s ease;
-    
 }
 .certificates .carousel .card:hover img{
     border-color: #fff;
@@ -713,7 +731,8 @@ section .title::after{
 
 .certificates{
     color:#111;
-    background: #fff;
+    background-image: url("white_bg.jpg");
+    background-size: cover;
 }
 
 .certificates .title::before{
@@ -729,6 +748,16 @@ section .title::after{
 
 
 
+
+.testimonies{
+    color:white;
+    background-image: url("black_bg.jpg");
+    background-size: cover;
+}
+
+.testimonies .title::before{
+    background: white
+}
 /* testimonies section styling */
 .testimonies .title::after{
     content: "what others say";

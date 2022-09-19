@@ -153,6 +153,45 @@
             font-weight: bold;
         }
 
+
+
+#mySidenav a {
+  position: absolute;
+  right: -50px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  right: 0;
+  width: 140px;
+  color: #ff0404;
+  background-color: white;
+}
+
+#home_new {
+  top: 90px;
+  background-color: #ff0404;
+}
+
+#hobbies_new {
+  top: 165px;
+  background-color: #ff0404;
+}
+
+#contact_new {
+  top: 245px;
+  background-color:#ff0404;
+}
+
+.icn{
+    font-size: 25px;
+}
     </style>
 
 </head>
@@ -171,7 +210,7 @@
                 <li><a href="#company" class="menu-btn">Company</a></li>
                 <li><a href="#skills" class="menu-btn">Skills</a></li>
                 <li><a href="#services" class="menu-btn">Projects</a></li>
-                <li><a href="#hobbies" class="menu-btn">Hobbies</a></li>  
+                <li><a href="#hobbies" class="menu-btn">Hobbies</a></li> 
                 <li><a href="#education" class="menu-btn">Education</a></li>
                 <li><a href="#certificates" class="menu-btn">Certificates</a></li>
                 <li><a href="#testimonies" class="menu-btn">Testimonies</a></li>
@@ -182,7 +221,16 @@
                 <i class="fas fa-bars"></i>
             </div>
         </div>
+
+        <div id="mySidenav" class="sidenav_new">
+            <a href="#home" id="home_new"><span class="icn">&#8962;&nbsp;&nbsp;</span>Home</a>
+            <a href="#hobbies" id="hobbies_new"><span class="icn">&#9819;&nbsp;&nbsp;</span>Hobbies</a>
+            <a href="#contact" id="contact_new"><span class="icn">&#9742;&nbsp;&nbsp;</span>Contact</a> 
+        </div>
     </nav>
+
+
+  
 
     <!-- home section start -->
     <section class="home" id="home">

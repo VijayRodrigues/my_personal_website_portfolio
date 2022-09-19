@@ -18,6 +18,11 @@ def index():
     return render_template("index.html")
 
 
+@app.route('/project_template')
+def project_template():
+    return render_template("project_template.html")    
+
+
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
     if request.method == "POST":

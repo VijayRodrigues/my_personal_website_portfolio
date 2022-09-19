@@ -43,7 +43,7 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing-2", {
-        strings: ["Data Analyst", "Senior Data Associate","Data Engineer"],
+        strings: ["Data Analyst", "Sr. Data Associate","Data Engineer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true

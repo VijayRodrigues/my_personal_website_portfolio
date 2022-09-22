@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projects Page</title>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='page_loader.css')}}">
 
-
-
+    
  
 <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -209,7 +209,9 @@ i:hover{
 }
 </style>
 </head>
-<body>
+<body onload="myFunction();" style="margin:0;">
+<div id="loader"></div>
+<div style="display:none;" id="myDiv" class="animate-bottom">  
     <section>
         <h1>Projects</h1>
     
@@ -337,7 +339,20 @@ i:hover{
         </div>
       </div>
     </section>
-    
+  
+    <script>
+      var myVar;
+      
+      function myFunction() {
+        myVar = setTimeout(showPage, 800);
+      }
+      
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+      </script>
+
 
     <script>
       var modalInfo = {

@@ -8,6 +8,7 @@
     <link rel="stylesheet"  href="{{ url_for('static', filename='style.css')}}">
     <link rel="stylesheet"  href="{{ url_for('static', filename='translator_container.css')}}">
     <link rel="stylesheet"  href="{{ url_for('static', filename='mobile_num.css')}}">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='dropdown_css.css')}}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
@@ -212,14 +213,24 @@
                 <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="#company" class="menu-btn">Company</a></li>
                 <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="{{ url_for('project_template') }}" target="_blank" class="menu-btn">Projects</a></li>
-                <li><a href="#education" class="menu-btn">Education</a></li>
-                <li><a href="#certificates" class="menu-btn">Certificates</a></li>
                 <li><a href="#testimonies" class="menu-btn">Testimonies</a></li>
             </ul>
-         
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
+            <div class="dropdown">
+                <button class="dropbtn">Qualifications<span>&nbsp;&#11167;</span>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#education">Education</a>
+                  <a href="#certificates">Certifications</a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Projects<span>&nbsp;&#11167;</span>
+                </button>
+                <div class="dropdown-content">
+                  <a href="{{ url_for('work_projects') }}" target="_blank">Work Projects</a>
+                  <a href="{{ url_for('personal_projects') }}" target="_blank">Personal Projects</a>
+                </div>
             </div>
         </div>
 

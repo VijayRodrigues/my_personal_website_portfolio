@@ -18,9 +18,14 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/project_template')
-def project_template():
-    return render_template("project_template.html")    
+@app.route('/work_projects')
+def work_projects():
+    return render_template("work_projects.html")
+
+
+@app.route('/personal_projects')
+def personal_projects():
+    return render_template("personal_projects.html") 
 
 
 @app.route('/contact', methods=["GET", "POST"])

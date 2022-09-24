@@ -210,22 +210,22 @@
             <div class="logo"><a href="#home">My Portfo<span>lio.</span></a></div>
            
             <ul class="menu">
-                <li><a href="#about" class="menu-btn">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <li><a href="#company" class="menu-btn">Company</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <li><a href="#skills" class="menu-btn">Skills</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="#about" class="menu-btn">About</a></li>&nbsp;&nbsp;&nbsp;
+                <li><a href="#company" class="menu-btn">Company</a></li>&nbsp;&nbsp;&nbsp;
+                <li><a href="#skills" class="menu-btn">Skills</a></li>&nbsp;&nbsp;&nbsp;
                 <li><a href="#testimonies" class="menu-btn">Testimonies</a></li>
-            </ul>
-            <div class="dropdown">
-                <button class="dropbtn">Qualifications<span>&nbsp;&#11167;</span>
+            <li><div class="dropdown">
+                <button class="dropbtn">&nbsp;&nbsp;&nbsp;Qualifications<span>&nbsp;&#11167;&nbsp;&nbsp;&nbsp;</span>
                 </button>
                 <div class="dropdown-content">
                   <a href="#education">Education</a>
                   <a href="#certificates">Certifications</a>
                 </div>
             </div>
-            
+            </li>
+        <li>
             <div class="dropdown">
-                <button class="dropbtn">Projects<span>&nbsp;&#11167;</span>
+                <button class="dropbtn">&nbsp;&nbsp;&nbsp;Projects<span>&nbsp;&#11167;</span>
                 </button>
                 <div class="dropdown-content">
                   <a href="{{ url_for('work_projects') }}" target="_blank">Work Projects</a>
@@ -233,7 +233,8 @@
                 </div>
             </div>
         </div>
-
+    </li>
+</ul>
         <div id="mySidenav" class="sidenav_new">
             <a href="#home" id="home_new"><span class="icn">&#8962;&nbsp;&nbsp;</span>Home</a>
             <a href="https://github.com/VijayRodrigues" id="github_new" target="_blank"><span class="fa fa-github"></span>Github</a>

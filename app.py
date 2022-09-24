@@ -23,9 +23,7 @@ def work_projects():
     return render_template("work_projects.html")
 
 
-@app.route('/personal_projects')
-def personal_projects():
-    return render_template("personal_projects.html") 
+
 
 
 @app.route('/contact', methods=["GET", "POST"])

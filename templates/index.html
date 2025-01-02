@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Vijay Rodrigues' Portfolio</title>
 
     <link rel="stylesheet"  href="{{ url_for('static', filename='style.css')}}">
     <link rel="stylesheet"  href="{{ url_for('static', filename='translator_container.css')}}">
@@ -30,7 +30,9 @@
         function myFunction() {
           alert("Your details have been submitted!!! I shall get back to you as early as possible");
         }
-      </script>
+    </script>
+
+    
 
     <style>
 
@@ -75,7 +77,7 @@
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: red; 
+    background: #5b5b5c; 
     border-radius: 20px;
   
   }
@@ -180,18 +182,18 @@
 
 #home_new {
   top: 90px;
-  background-color: #ff0404;
+  background-color: #5b5b5c;
 }
 
 #github_new {
   top: 165px;
-  background-color: #ff0404;
+  background-color: #5b5b5c;
   height: 80px;
 }
 
 #contact_new {
   top: 250px;
-  background-color:#ff0404;
+  background-color:#5b5b5c;
 }
 
 .icn{
@@ -228,7 +230,7 @@
                 <button class="dropbtn">&nbsp;&nbsp;&nbsp;Projects<span>&nbsp;&#11167;</span>
                 </button>
                 <div class="dropdown-content">
-                  <a href="{{ url_for('work_projects') }}" target="_blank">Work Projects</a>
+                  <a href="{{ url_for('work_projects') }}" target="_blank" onclick="return false;">Work Projects</a>
                   <a href="{{ url_for('personal_projects') }}" target="_blank">Personal Projects</a>
                 </div>
             </div>
@@ -262,7 +264,7 @@
                 <div class="text-3">& I'm a <span class="typing"></span></div>
                 
                 <br>
-                <a href="https://www.linkedin.com/in/vijay-rodrigues-6b6422164" target="_blank">LINKEDIN</a>
+                <a href="https://www.linkedin.com/in/vijayrodrigues" target="_blank">LINKEDIN</a>
             </div>  
 
 
@@ -278,15 +280,56 @@
             <h2 class="title">About Me</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="{{ url_for('static', filename='about_me.jpg')}}" alt="">
+                    <img src="{{ url_for('static', filename='about_me.png')}}" alt="">
                 </div>
                 <div class="column right">
                     <div class="text">I'm Vijay Rodrigues and I'm a <span class="typing-2"></span></div>
-                    
-                    <p>I have 3 years of overall experience and about 1.5 years of experience in Data Analytics. Throughtout my career I have supported multiple clients from various locations, predominantly from AUS. Have experience in supporting domains like Retail (E-Commerce), Automotive, Banking, Healthcare and Energy / Utilities sector.</p>
+                
+                    <p>As a seasoned Data Analyst / Data Engineer with over <span id="experience-years"> 0 </span> years of experience, I actively assist clients in the Insurance sector across APAC, ANZ and North America, leveraging expertise in Apache Spark / PySpark, GIT, GitHub, Jira, Azure Databricks, Python (automation and development), and R. Proficient in ETL processes using SSIS, Python, and experienced with SQL Server, and SAS. My role involves not only analyzing and engineering data but also agile problem-solving and collaboration to ensure that clients in the Insurance sector derive actionable insights and solutions from their data.</p>
+                    <br>
+                    <p>Prior to the current position, success was achieved in supporting clients and undertaking projects spanning multiple domains, including Energy, Automotive, Banking, E-Commerce, and Healthcare. Exposure to various industries has endowed with invaluable insights and adaptability to address unique requirements and overcome industry-specific challenges.</p>
                     <br>
                     <p>I initially started my career as an IT Recruiter but down the line I got interested into analytics. It took me a while to realize no matter what profession we work into, we do analysis of some kind. Take an example of how a recruiter works. We simply do not engage in making random calls but understand what the requirements are, the skillsets, get better understanding of the domain and the market as a whole. Where in analytics we speak about "Story Telling", in recruiment it's quite similar where we breakdown the information and present it as required to both clients and candidates.</p>
-                   
+                     
+                    <script>
+                        function updateExperience() {
+                            // Define the starting year and month of your experience
+                            const startYear = 2018; // Change this to the year you started
+                            const startMonth = 12; // Change this to the month you started (1 for January, 12 for December)
+                            
+                            // Get the current date
+                            const currentDate = new Date();
+                            const currentYear = currentDate.getFullYear();
+                            const currentMonth = currentDate.getMonth() + 1; // getMonth() returns 0-11, so add 1
+                
+                            console.log(`Current Year: ${currentYear}, Current Month: ${currentMonth}`); // Debugging
+                
+                            // Calculate the total years and months of experience
+                            let experienceYears = currentYear - startYear;
+                            let experienceMonths = currentMonth - startMonth;
+                
+                            console.log(`Experience Years: ${experienceYears}, Experience Months: ${experienceMonths}`); // Debugging
+                
+                            // Adjust if the current month is before the start month
+                            if (experienceMonths < 0) {
+                                experienceYears -= 1;
+                                experienceMonths += 12;
+                            }
+                
+                            // Calculate the total experience in years, as a decimal
+                            const totalExperience = experienceYears + (experienceMonths / 12);
+                            const formattedExperience = totalExperience.toFixed(1);
+                
+                            console.log(`Total Experience: ${formattedExperience}`); // Debugging
+                
+                            // Update the HTML content with the calculated experience
+                            document.getElementById('experience-years').innerText = formattedExperience;
+                        }
+                
+                        // Call the function to update the experience when the page loads
+                        updateExperience();
+                    </script>
+
                     <a href="{{ url_for('static', filename='VijayRodrigues_CV.pdf')}}" download="My_CV" target="_blank">Download CV</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="https://public.tableau.com/app/profile/vijay.rodrigues#!/?newProfile=&activeTab=0"  target="_blank">Tableau Profile</a>
                 </div>
@@ -299,37 +342,42 @@
     <div class="max-width">
         <h2 class="title">Company Details</h2>
         <div class="carousel owl-carousel">
-            <div class="card">
+            <div class="card" onclick="openModal(company_1)">
                 <div class="box">
                     <img src="{{ url_for('static', filename='teksystems_logo1.jpg')}}" alt="">
-                    <div class="text">IT Recruiter</div>
-                    <p>TEKsystems (Allegis Group)</p>
-                    <p>Jan 2019 - Aug 2020.</p>
-                    <p>Bangalore</p>
+                    <div class="text">TEKsystems (Allegis Group) <br> JAN 2019 - AUG 2020</div>
+                    
                 </div>
+                <!--<a href="#" class="openTestimonials" onclick="openModalTestimonies(company_1)">TESTIMONIES</a> -->
             </div>
-            <div class="card">
+            
+            
+            <div class="card" onclick="openModal(company_2)">
                 <div class="box">
                     <img src="{{ url_for('static', filename='proziod_logo.png')}}" alt="">
-                    <div class="text">Data Analyst</div>
-                    <p>Proziod Analytics Pvt. Ltd.</p>
-                    <p>Aug 2020 - Dec 2021.</p>
-                    <p>Bangalore</p>
+                    <div class="text">Proziod Analytics Pvt. Ltd. <br> AUG 2020 - DEC 2021</div>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" onclick="openModal(company_3)">
                 <div class="box">
                     <img src="{{ url_for('static', filename='chubb_logo2.gif')}}" alt="">
-                    <div class="text">Senior Data Associate</div>
-                    <p>Chubb Limited</p>
-                    <p>Jan 2022 - present.</p>
-                    <p>Bangalore</p>
+                    <div class="text">Chubb Business Services Ltd. <br> DEC 2021 - Present</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        
+        <span class="close">&times;</span>
+    </div>
+</div>
+
+
 
  <!-- skills section start -->
  <section class="skills" id="skills">
@@ -465,7 +513,7 @@
                 <div class="card">
                     <div class="box">
                         <img src="{{ url_for('static', filename='masters_college.jfif')}}" alt="">
-                        <div class="text">SDM PG Centre, Mangalore</div>
+                        <div class="text">SDM College of Business Management, Mangalore</div>
                         <p>2016 - 2018</p>
                     </div>
                 </div>
@@ -482,12 +530,12 @@
             <div class="carousel owl-carousel">
                 <div class="card">
                     <div class="box">
-                        <i class="fas fa-award"></i>
-                        <div class="text">SQL & PostgreSQL</div>
+                        <i class="fas fa-award"></i>  
+                        <div class="text">SQL & PostgreSQL</div> 
                         <p>Udemy</p>
                         <p>May 2021 - No Expiration Date</p>
                         <br>
-                        <a href="{{ url_for('static', filename='udemy_sql.pdf')}}" target="blank_">View certificate</a>
+                        <a href="https://www.udemy.com/certificate/UC-10e1d9d1-8435-4274-94f1-4dac3f9c8ce7/" target="blank_">View certificate</a>
                     </div>
                 </div>
                 <div class="card">
@@ -513,16 +561,143 @@
                 
                 </div>    
             </div>  
+
+
+
+<br>
+
+
+            <div class="carousel owl-carousel">
+                <div class="card">
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='pcep_image.png')}}" alt="Certificate Image">
+                        <div class="text">[PCEP-30-02] PCEP – Certified Entry-Level Python Programmer</div>
+                        <p>Python Institute</p>
+                        <p>April 2024 - No Expiration Date</p>
+                        <br>
+                       <a href="https://www.credly.com/badges/bee5ccfa-e747-488c-a799-ff4c3bc0bf18" target="_blank">View certificate</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='databricks_generative_ai_image.png')}}" alt="Certificate Image">
+                        <div class="text">Databricks Accredited Generative AI Fundamentals</div>
+                        <p>Databricks</p>
+                        <p>Jan 2024 - Jan 2026</p>
+                        <br>
+                        <a href="https://credentials.databricks.com/4b2e7c63-c28b-4267-bf5d-bd5a97cf208c#gs.bvlbkv" target="_blank">View certificate</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='databricks_lakehouse_image.png')}}" alt="Certificate Image" style="height:180px;">      
+                        <div class="text">Databricks Accredited Lakehouse Fundamentals</div>
+                        <p>Databricks</p>
+                        <p>Jan 2024 - Jan 2026</p>
+                        <br>
+                        <a href="https://credentials.databricks.com/41e233c9-530e-45d7-b397-61bbb4ef499b#gs.bvlcnj" target="_blank">View certificate</a>
+                    </div>
+
+                
+                </div>    
+            </div>  
         </div>
     </section>
 
 
-
-    <!-- testimonies section start -->
+  
     <section class="testimonies" id="testimonies">
         <div class="max-width">
             <h2 class="title">Testimonies</h2>
             <div class="carousel owl-carousel">
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-quote-left"></i>
+                        <div class="text">I recommend Vijay as a dedicated and talented professional. During our time working together, I was consistently impressed with his ability to quickly learn and master various tools. He consistently produced high-quality deliverables and demonstrated exceptional problem-solving skills. Keep rocking, Vijay!</div>
+                        <br>
+                        <p class="name_text">Richard Churchill A</p>
+                        <p class="position_text">AVP Implementation Engineer, Rating Platform.</p>
+                        <p class="company_text">Chubb Ltd.</p>
+                        <p class="position_text2">Richard managed me DIRECTLY</p><br><br><br>
+                        <p class="company_text">Chubb Ltd.</p>
+                    </div>
+                </div>
+                
+                
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-quote-left"></i>
+                        <div class="text">Vijay is a very strong data and IT associate. He is instrumental in helping automate and streamline our price monitoring process. He is a great business partner and his contributions and expertise are highly valued by me and our team.</div>
+                        <br>
+                        <p class="name_text">Mariano Blanco</p>
+                        <p class="position_text">Vice President and Actuary</p>
+                        <p class="company_text">Chubb Ltd.</p>
+                        <p class="position_text2">Mariano was senior to Vijay but didn't manage DIRECTLY</p><br><br><br>
+                        <p class="company_text">Chubb Ltd.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-quote-left"></i>
+                        <div class="text">Vijay is a quick learner and eager to work. He is detailed and thorough and responsive. He assisted in the programming. and automation of several projects in our international pricing unit. He showed great initiative in working with big data and developing creative solutions.</div>
+                        <br>
+                        <p class="name_text">Marie Christian</p>
+                        <p class="position_text">AVP, Global Casualty Actuarial</p>
+                        <p class="company_text">Chubb Ltd.</p>
+                        <p class="position_text2">Marie was senior to Vijay but didn't manage DIRECTLY</p><br><br><br>
+                        <p class="company_text">Chubb Ltd.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-quote-left"></i>
+                        <div class="text">I had the opportunity to remotely work with Vijay. His great communication skills made easier the physical distance challenges. 
+Besides converting SAS codes in SQL language, Vijay was given responsibilities of a SQL developer and that was not part of his expertise.
+He demonstrates commitment to learn new skills and perform what was necessary. Multiple ingestions and corrections in our server data were possible due his hard work and dedication.</div>
+                        <br>
+                        <p class="name_text">Heloisa Bete</p>
+                        <p class="position_text">Actuarial Transformation Lead & Junior Board Member</p>
+                        <p class="company_text">Chubb Ltd.</p>
+                        <p class="position_text2">Heloisa worked with Vijay on the same team</p><br><br><br>
+                        <p class="company_text">Chubb Ltd.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-quote-left"></i>
+                        <div class="text">Depth knowledge in BI reporting along with a great record of work history. Proven, obedient and self-motivated person. Result-driven approach with good analytical exposure.</div>
+                        <br>
+                        <p class="name_text">Jyoti Ranjan Jena</p>
+                        <p class="position_text">Lead</p>
+                        <p class="company_text">Proziod Analytics Pvt. Ltd.</p>
+                        <p class="position_text2">Jyoti managed me DIRECTLY</p><br><br><br>
+                        <p class="company_text">Proziod Analytics Pvt. Ltd.</p>
+                    </div>
+                </div>    
+
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-quote-left"></i>
+                        <div class="text">Vijay is highly motivated and valuable member of the team. His biggest strength is his ability to deal with conflicting priorities in high-pressure situations. Vijay has exhibited consistency in his ability to remain focussed and committed. His willingness to accept challenges and working over and beyond has contributed to the achieve company's goals. I highly recommend Vijay as a valuable member of the team.</div>
+                        <br>
+                        <p class="name_text">Simmi Nagpal</p>
+                        <p class="position_text">Senior Tendering and Markets Analyst</p>
+                        <p class="company_text">Bill Identity (Formerly BidEnergy BID)</p>
+                        <p class="position_text2">Simmi managed me INDIRECTLY</p><br><br><br>
+                        <p class="company_text">Proziod Analytics Pvt. Ltd.</p>
+                    </div>
+                </div> 
+
+
                 <div class="card">
                     <div class="box">
                         <i class="fas fa-quote-left"></i>
@@ -531,9 +706,11 @@
                         <p class="name_text">Aditya Raj</p>
                         <p class="position_text">Account Manager</p>
                         <p class="company_text">TEKsystems</p>
-                        <p class="position_text2">Aditya managed me DIRECTLY</p>
+                        <p class="position_text2">Aditya managed me DIRECTLY</p><br><br><br>
+                        <p class="company_text">TEKsystems (an Allegis Group Company)</p>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="box">
                         <i class="fas fa-quote-left"></i>
@@ -543,25 +720,45 @@
                         <p class="name_text">Ajay Naik</p>
                         <p class="position_text">New Relic SME</p>
                         <p class="company_text">Coforge</p>
-                        <p class="position_text2">Ajay was a client of mine</p>
+                        <p class="position_text2">Ajay was a client of mine</p><br><br><br>
+                        <p class="company_text">TEKsystems (an Allegis Group Company)</p>
                     </div>
                 </div>
+                
+
                 <div class="card">
                     <div class="box">
                         <i class="fas fa-quote-left"></i>
-                        <div class="text">Vijay is highly motivated and valuable member of the team. His biggest strength is his ability to deal with conflicting priorities in high-pressure situations. Vijay has exhibited consistency in his ability to remain focussed and committed. His willingness to accept challenges and working over and beyond has contributed to the achieve company's goals. I highly recommend Vijay as a valuable member of the team.</div>
+                        <div class="text">Vijay eased my process of recruitment and going through with Ascena Retail group in 2019 ,
+                            Being a recruiter and an excellent counselor , he is good in building relationship i always enjoyed talking to him and discussing companies/project requirement/process.
+                            I just want to summarize : 
+                            1) He is having very positive , calm and humble approach.
+                            2) Good communication skills and he knows how to talk , its always not about companies interests.
+                            3) He is passionate about what he does and doing in proper way which defines quality of work.
+                            4) Being a technical recruiter, he is technical sound with upcoming technologies in eCommence/Domain , he keep on learning new things, being a good listener as a add-on.
+                            5) Last but not least :- He is comfortable in many language that's good somehow.
+                            
+                            All the best for you future !! Do well wherever you pitch in and i trust you gonna do your best. </div>
                         <br>
-                        <p class="name_text">Simmi Nagpal</p>
-                        <p class="position_text">Senior Tendering and Markets Analyst</p>
-                        <p class="company_text">Bill Identity (Formerly BidEnergy BID)</p>
-                        <p class="position_text2">Simmi managed me INDIRECTLY</p>
+                        <p class="name_text">Anil Kumar</p>
+                        <p class="position_text">Software Engineer</p>
+                        <p class="company_text">Ascena Retail Group, Inc.</p>
+                        <p class="position_text2">Anil was a client of mine</p><br>
+                        <p class="company_text">TEKsystems (an Allegis Group Company)</p>
                     </div>
                 </div>
-
                 
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
 
 
 
@@ -642,7 +839,7 @@
     <footer class="contact">
         <a href="https://www.facebook.com/vijay.rodrigues/" target="_blank" class="fa fa-facebook"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://www.instagram.com/vijay_rodrigues_666/" class="fa fa-instagram" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://www.linkedin.com/in/vijay-rodrigues-6b6422164" target="_blank" class="fa fa-linkedin"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.linkedin.com/in/vijayrodrigues" target="_blank" class="fa fa-linkedin"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://github.com/VijayRodrigues" class="fa fa-github" target="_blank"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://www.hackerrank.com/vijayrodrigues18" class="fab fa-hackerrank" target="_blank"></a>
         <br><br><br>
@@ -679,7 +876,7 @@
     -->
 </style>
     
-    <br /><select class="trans_ops" onchange="doGTranslate(this);"><option value="en|en">English (default)</option><option value="en|kn">Kannada</option><option value="en|hi">Hindi</option><option value="en|ml">Malayalam</option><option value="en|te">Telugu</option><option value="en|ta">Tamil</option><option value="en|no">Norwegian</option><option value="en|es">Spanish</option><option value="en|ar">Arabic</option><option value="en|iw">Hebrew</option></select><div id="google_translate_element2"></div>
+    <br /><select class="trans_ops" onchange="doGTranslate(this);"><option value="en|en">English (default)</option><option value="en|kn">Kannada</option><option value="en|hi">Hindi</option><option value="en|ml">Malayalam</option><option value="en|te">Telugu</option><option value="en|ta">Tamil</option><option value="en|no">Norwegian</option><option value="en|es">Spanish</option><option value="en|ar">Arabic</option></select><div id="google_translate_element2"></div>
     <script type="text/javascript">
     function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
     </script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>

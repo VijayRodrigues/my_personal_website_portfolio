@@ -118,7 +118,7 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: red;
+    background: #5b5b5c;
 }
 .navbar .max-width{
     display: flex;
@@ -167,7 +167,7 @@ section .title::after{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: red;
+    background: #5b5b5c;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -195,7 +195,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("background_img13.jpg") no-repeat center;
+    background: url("background_img15.jpeg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -216,7 +216,9 @@ section .title::after{
 .home .home-content .text-2{
     font-size: 75px;
     font-weight: 600;
-    margin-left: -3px;
+    margin-left: -3px;  
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 .home .home-content .text-3{
     font-size: 40px;
@@ -224,19 +226,19 @@ section .title::after{
 }
 .home .home-content .text-3 span{
     background-color: rgb(223, 210, 210);
-    color: red;
+    color: #5b5b5c;
     font-weight: 800;
 }
 .home .home-content a{
     display: inline-block;
-    background: red;
+    background: #5b5b5c;
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
-    border: 2px solid red;
+    border: 2px solid #5b5b5c;
     transition: all 0.3s ease;
 }
 .home .home-content a:hover{
@@ -255,8 +257,8 @@ section .title::after{
     width: 45%;
 }
 .about .about-content .left img{
-    height: 400px;
-    width: 400px;
+    height: 600px;
+    width: 480px;
     object-fit: cover;
     border-radius: 6px;
 }
@@ -269,21 +271,21 @@ section .title::after{
     margin-bottom: 10px;
 }
 .about .about-content .right .text span{
-    color: red;
+    color: #5b5b5c;
 }
 .about .about-content .right p{
     text-align: justify;
 }
 .about .about-content .right a{
     display: inline-block;
-    background: red;
+    background: #5b5b5c;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid red;
+    border: 2px solid #5b5b5c;
     transition: all 0.3s ease;
 }
 .about .about-content .right a:hover{
@@ -297,7 +299,7 @@ section .title::after{
 /* services education section styling */
 .company{
     color:#fff;
-    background-image: url("black_bg.jpg");
+    background-image: url("blue_bg.jpg");
     background-size: cover;
 }
 
@@ -331,6 +333,7 @@ section .title::after{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+    text-align: center;
 }
 .company .carousel .card img{
     height: 150px;
@@ -349,11 +352,56 @@ section .title::after{
 
 
 
+/* Hide the modal by default */
+#myModal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+
+/* Define CSS classes */
+.text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;  
+    text-align: left;
+    font-weight: bold;
+}
+
+.company-name {
+    font-weight: bold;
+}
+
+
+
 
 /* services education section styling */
 .services, .education{
     color:#fff;
-    background-image: url("black_bg.jpg");
+    background-image: url("blue_bg.jpg");
     background-size: cover;
 }
 .services .title::before,
@@ -389,7 +437,7 @@ section .title::after{
 /* services company section styling */
 .company{
     color:#fff;
-    background-image: url("black_bg.jpg");
+    background-image: url("blue_bg.jpg");
     background-size: cover;
 }
 
@@ -399,7 +447,7 @@ section .title::after{
 
 .company .title::after{
     background: #111;
-    content: "Experience";
+    content: "Experience (click the below BOXES)";
 }
 
 
@@ -408,7 +456,7 @@ section .title::after{
 
 .services{
     color:white;
-    background-image: url("black_bg.jpg");
+    background-image: url("blue_bg.jpg");
     background-size: cover;
 }
 
@@ -473,7 +521,7 @@ section .title::after{
     padding: 8px 16px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid red;
+    border: 2px solid #5b5b5c;
     transition: all 0.3s ease;
 }
 .skills .skills-content .left a:hover{
@@ -689,7 +737,7 @@ section .title::after{
     content: "who with me";
 }
 .certificates .carousel .card{
-    background: #222;
+    background: #746767;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
@@ -718,10 +766,10 @@ section .title::after{
 }
 .certificates .carousel .card img{
     height: 150px;
-    width: 150px;
-    object-fit: cover;
+    width: 190px;
+    object-fit: fill;
     border-radius: 50%;
-    border: 5px solid red;
+    border: 5px solid rgb(221, 213, 213);
     transition: all 0.3s ease;
 }
 .certificates .carousel .card:hover img{
@@ -751,7 +799,7 @@ section .title::after{
 
 .testimonies{
     color:white;
-    background-image: url("black_bg.jpg");
+    background-image: url("blue_bg.jpg");
     background-size: cover;
 }
 
@@ -764,7 +812,7 @@ section .title::after{
 }
 .testimonies .carousel .card{
     background: #222;
-    border-radius: 6px;
+    border-radius: 16px;
     padding: 25px 35px;
     text-align: center;
     overflow: hidden;
